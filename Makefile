@@ -16,13 +16,13 @@ destroy := terraform destroy -auto-approve
 list:
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-init: ##Terraform Init 
+init: ## Terraform Init 
 	@terraform init
 
 blue: ## Deploy BLUE environment  
 	$(blue)
 
-blue-90: ## now routing 10% of the traffic to the green environment.
+blue-90: ## Routing 10% of the traffic to the green environment.
 	$(blue-90)
 
 split : ## Splitting the traffic to the blue and green environments.
@@ -31,8 +31,8 @@ split : ## Splitting the traffic to the blue and green environments.
 green: ## Promote GREEN environment  
 	$(green)
 
-destroy: ##Destryo all infra
-	$(destroy)
-
-blue-down: ##Scale down blue environments
+blue-down: ## Scale down blue environments
 	$(blue-down)
+
+destroy: ## Destroy all infra
+	$(destroy)
