@@ -8,9 +8,15 @@ This repository is a simple example of Blue-green deployments and rolling deploy
 - AWS account
 - Make
 
-### USAGE
+### Usage
 
-»» Make file 
+
+##### Clone this repository
+````
+git clone https://github.com/julialamenza/blue-gree-canary.git
+````
+
+#####  Makefile 
 
 ````
 init: Terraform init
@@ -24,7 +30,7 @@ destroy: Destroy all infra
 ````
 
 
-»» Verify deployments 
+##### Verify deployments 
 
 Verify that your environment was deployed successfully by visiting the load balancer's DNS name in your browser or CURLing it from your terminal.
 
