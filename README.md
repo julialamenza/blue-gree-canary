@@ -10,9 +10,12 @@ This repository is a simple example of Blue-green deployments and rolling deploy
 
 ### USAGE
 
-» Verify blue environment
+»» Make file 
 
-Verify that your blue environment was deployed successfully by visiting the load balancer's DNS name in your browser or cURLing it from your terminal.
+
+»» Verify deployments 
+
+Verify that your blue environment was deployed successfully by visiting the load balancer's DNS name in your browser or CURLing it from your terminal.
 
 ````
 for i in `seq 1 5`; do curl <your loadbalancer url> ; done
